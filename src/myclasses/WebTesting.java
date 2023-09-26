@@ -1,7 +1,9 @@
-import org.testng.annotations.AfterMethod;
+package myclasses;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class WebTesting {
@@ -22,21 +24,28 @@ public class WebTesting {
 	 * 7) same for after Test
 	 */
 	
-	@Test
+	@Test(groups="Smoke")
 	public void First_WebTest() {
 		System.out.println("I am in first web Test");
 	}
 
 	
 	@Test
-	public void Second_WebTest() {
+	@Parameters({"Username","Password"})
+	public void Second_WebTest(String username, String password) {
 		System.out.println("I am in second web Test");
+		System.out.println(username + "  "+ password);
+		
 	}
 	
-	@BeforeTest
+
+	
+	@BeforeTest(alwaysRun=true)
 	public void Before_WebTest() {
 		System.out.println("I am in before Test");
 	}
+	
+	
 	
 	@AfterTest
 	public void After_WebTest() {
@@ -44,15 +53,31 @@ public class WebTesting {
 	}
 	
 	
-	@BeforeMethod
-	public void Before_Method_WebTest() {
-		System.out.println("I will execute before every Test method");
+	
+	@BeforeClass
+	public void BeforeClass_WebTest() {
+		System.out.println("I am in before Class WebTest");
 	}
 	
-	@AfterMethod
-	public void After_Method_WebTest() {
-		System.out.println("I will execute after every Test method");
+	
+	@AfterClass
+	public void AfterClass_WebTest() {
+		System.out.println("I am in After class webtest");
 	}
+	
+	
+	
+	
+	
+//	@BeforeMethod
+//	public void Before_Method_WebTest() {
+//		System.out.println("I will execute before every Test method");
+//	}
+//	
+//	@AfterMethod
+//	public void After_Method_WebTest() {
+//		System.out.println("I will execute after every Test method");
+//	}
 	
 	
 	
