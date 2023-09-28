@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\msingh\AppData\Local\Temp\testng-eclipse-1597383572\testng-customsuite.xml</span>
+                    <span>C:\Users\msingh\AppData\Local\Temp\testng-eclipse--2104809825\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Assertions.SoftAssertions" class="method navigator-link" hash-for-method="LEARN_SoftAssert">LEARN_SoftAssert</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Validations.ArraysAssertion" class="method navigator-link" hash-for-method="ValidateArrays">ValidateArrays</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,19 +122,21 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Assertions.SoftAssertions</span>
+              <span class="class-name">Validations.ArraysAssertion</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LEARN_SoftAssert">
-                  </a> <!-- LEARN_SoftAssert -->
-                  <span class="method-name">LEARN_SoftAssert</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [Neha] but found [Aparna]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at Assertions.SoftAssertions.LEARN_SoftAssert(SoftAssertions.java:26)
+                  <a name="ValidateArrays">
+                  </a> <!-- ValidateArrays -->
+                  <span class="method-name">ValidateArrays</span>
+                  <div class="stack-trace">java.lang.AssertionError: Arrays differ at element [0]: Sugesh != Sajitha expected [Sugesh] but found [Sajitha]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:1244)
+	at org.testng.Assert.assertEquals(Assert.java:1302)
+	at Validations.ArraysAssertion.ValidateArrays(ArraysAssertion.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,7 +174,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\msingh\AppData\Local\Temp\testng-eclipse-1597383572\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\msingh\AppData\Local\Temp\testng-eclipse--2104809825\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,7 +183,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Assertions.SoftAssertions&quot;/&gt;
+      &lt;class name=&quot;Validations.ArraysAssertion&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -223,14 +225,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LEARN_SoftAssert')
-data.setCell(0, 2, 'Assertions.SoftAssertions')
-data.setCell(0, 3, 24);
+data.setCell(0, 1, 'ValidateArrays')
+data.setCell(0, 2, 'Validations.ArraysAssertion')
+data.setCell(0, 3, 22);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 ms</span>
+              <span class="suite-total-time">Total running time: 22 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -256,11 +258,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Assertions.SoftAssertions</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Validations.ArraysAssertion</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">LEARN_SoftAssert</span>
+                <span class="method-name">ValidateArrays</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
